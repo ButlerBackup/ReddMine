@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fbutton="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <EditText
+        android:id="@+id/etWithdrawAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:ems="10"
+        android:hint="Your Wallet Address"
+        android:text="RmmWH8B7jx3UybjyFScTjy6VTP9zvXfHJz" />
+
+    <info.hoang8f.widget.FButton
+        android:id="@+id/bQr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/etWithdrawAddress"
+        android:text="Take QR photo"
+        fbutton:cornerRadius="0dp"
+        fbutton:shadowEnabled="true"
+        fbutton:shadowHeight="3dp" />
+
+    <info.hoang8f.widget.FButton
+        android:id="@+id/bWithdraw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/bQr"
+        android:text="Withdraw"
+        fbutton:cornerRadius="0dp"
+        fbutton:shadowEnabled="true"
+        fbutton:shadowHeight="3dp" />
+
+    <TextView
+        android:id="@+id/tvWalletAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/etAmountToWithdraw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/etWithdrawAddress"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:ems="10"
+        android:hint="Amount to Withdraw"
+        android:inputType="numberDecimal" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tvWalletAmount"
+        android:padding="8dp"
+        android:text="*rounded down to the nearest whole number. Remaining coins are used to keep the server running."
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+</RelativeLayout>

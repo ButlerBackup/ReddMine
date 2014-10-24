@@ -1,0 +1,27 @@
+<resources>
+
+    <string name="app_name">ReddMine</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="welcome_text">Hi Welcome! Thanks for downloading my application. Let\'s cut the chase and play some games! However, I\'ll have to create a Reddcoin wallet for you. Once you have a stable internet connection, click the button below!</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <array name="titles">
+        <item>Home</item>
+        <item>Withdraw</item>
+        <item>Settings</item>
+        <item>Help</item>
+        <item>About</item>
+    </array>
+    <array name="help">
+        <item><![CDATA[<b>1)</b> A wallet is unique for every phone. If you\'re changing to a new smartphone, be sure to withdraw the coins to another wallet, or contact me for a direct transfer (no fees, don\'t worry). ]]></item>
+        <item><![CDATA[<b>2)</b> Each minefield is generated the moment you click \"Play\". What I do is to fill up an array with numbers of \"1\" and \"0\", then scramble them up. No mine is planted below your finger\'s touches, Everything is random.]]></item>
+        <item><![CDATA[<b>3)</b> To cash out and not risk any more coins, click the multiplier above the blue \"Play\" button after the game has started. ]]></item>
+        <item><![CDATA[<b>4)</b> To get the QR code or direct address of your wallet to share etc, click on the wallet address.]]></item>
+        <item><![CDATA[<b>5)</b> If the coins remaining is stuck at \"Refreshing\", click the text to initiate loading. DO NOT spam or else problems will arise. ]]></item>
+        <item><![CDATA[<b>6)</b> A SHA256 hash of the mines\' positions and current game\'s data is generated. After the game ends, the actual value is shown. Click on it and it will open up a webpage for you to verify the actual game hash. ]]></item>
+        <item><![CDATA[<b>7)</b> Any game or data/transaction manipulation will result in an instant ban. ]]></item>
+    </array>
+
+</resources>

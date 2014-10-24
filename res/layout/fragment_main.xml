@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fbutton="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <com.mobsandgeeks.ui.TypefaceTextView
+                android:id="@+id/tvReddAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:gravity="center"
+                android:text="Medium Text"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                fbutton:customTypeface="roboto.ttf" />
+
+            <SeekBar
+                android:id="@+id/sbWinAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/tvMinesResult"
+                android:max="21"
+                android:progress="7" />
+
+            <com.mobsandgeeks.ui.TypefaceTextView
+                android:id="@+id/tvMinesResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/etReddAmountToBet"
+                android:gravity="center"
+                android:text="Small Text"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                fbutton:customTypeface="roboto.ttf" />
+
+            <com.mobsandgeeks.ui.TypefaceTextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/etReddAmountToBet"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/etReddAmountToBet"
+                android:gravity="center_vertical"
+                android:text="REDD"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                fbutton:customTypeface="roboto.ttf" />
+
+            <EditText
+                android:id="@+id/etReddAmountToBet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/tvReddRemaining"
+                android:layout_toLeftOf="@+id/textView2"
+                android:ems="10"
+                android:inputType="numberDecimal" >
+
+                <requestFocus />
+            </EditText>
+
+            <com.mobsandgeeks.ui.TypefaceTextView
+                android:id="@+id/tvReddRemaining"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tvReddAddress"
+                android:gravity="center"
+                android:text="Large Text"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                fbutton:customTypeface="roboto.ttf" />
+        </RelativeLayout>
+
+        <TableLayout
+            android:id="@+id/tableLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+        </TableLayout>
+
+        <com.mobsandgeeks.ui.TypefaceTextView
+            android:id="@+id/tvStopAndDraw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Large Text"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:visibility="invisible"
+            fbutton:customTypeface="roboto.ttf" />
+
+        <info.hoang8f.widget.FButton
+            android:id="@+id/bPlayNow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:enabled="false"
+            android:text="Play!"
+            fbutton:cornerRadius="0dp"
+            fbutton:shadowEnabled="true"
+            fbutton:shadowHeight="3dp" />
+
+        <com.mobsandgeeks.ui.TypefaceTextView
+            android:id="@+id/tvGameResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Medium Text"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:visibility="gone"
+            fbutton:customTypeface="roboto.ttf" />
+    </LinearLayout>
+
+</ScrollView>
