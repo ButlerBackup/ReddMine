@@ -68,7 +68,7 @@ public class WalletAddressDialogFragment extends DialogFragment {
 				Crouton.makeText(getActivity(), "Reddcoin wallet address copied to clipboard!", Style.CONFIRM).show();
 			}
 		});
-		QRCodeEncoder qrCodeEncoder = new QRCodeEncoder(address, null, Contents.Type.TEXT, BarcodeFormat.QR_CODE.toString(), 1200);
+		QRCodeEncoder qrCodeEncoder = new QRCodeEncoder(address, null, Contents.Type.TEXT, BarcodeFormat.QR_CODE.toString(), 500);
 		try {
 			Bitmap bitmap = qrCodeEncoder.encodeAsBitmap();
 			BitmapDrawable ob = new BitmapDrawable(bitmap);

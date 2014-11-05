@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="Settings" >
+        <Preference
+            android:key="pref_tutorial"
+            android:title="View Tutorial" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="MISC" >
+        <Preference
+            android:summary="/u/ReddAPI - Providing the ReddCoin API\n/u/ExaPaw - Helping me out with finding exploits for the game\n/u/aari13 + /u/pdro13 - Suggestions for noob-friendly tutorial\nand of cos, the whole of /u/ReddCoin community &lt;3"
+            android:title="Special Thanks To" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

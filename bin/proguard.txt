@@ -1,3 +1,6 @@
+# view res/layout/activity_tutorial.xml #generated:7
+-keep class android.support.v4.view.ViewPager { <init>(...); }
+
 # view res/layout/activity_main.xml #generated:1
 -keep class android.support.v4.widget.DrawerLayout { <init>(...); }
 
@@ -54,12 +57,14 @@
 -keep class com.jwetherell.quick_response_code.ViewfinderView { <init>(...); }
 
 # view res/layout/fragment_help_adapter_item.xml #generated:8
-# view res/layout/fragment_main.xml #generated:120
+# view res/layout/fragment_main.xml #generated:118
 # view res/layout/fragment_main.xml #generated:18
 # view res/layout/fragment_main.xml #generated:40
 # view res/layout/fragment_main.xml #generated:52
-# view res/layout/fragment_main.xml #generated:77
-# view res/layout/fragment_main.xml #generated:97
+# view res/layout/fragment_main.xml #generated:75
+# view res/layout/fragment_main.xml #generated:95
+# view res/layout/fragment_tutorial_one.xml #generated:8
+# view res/layout/fragment_tutorial_two.xml #generated:8
 -keep class com.mobsandgeeks.ui.TypefaceTextView { <init>(...); }
 
 # view AndroidManifest.xml #generated:16
@@ -68,12 +73,21 @@
 # view res/layout/activity_main.xml #generated:13
 -keep class dev.blacksheep.reddmine.NavigationDrawerFragment { <init>(...); }
 
+# view AndroidManifest.xml #generated:29
+-keep class dev.blacksheep.reddmine.SettingsActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:31
+-keep class dev.blacksheep.reddmine.TutorialActivity { <init>(...); }
+
 # view AndroidManifest.xml #generated:22
 -keep class dev.blacksheep.reddmine.WelcomeActivity { <init>(...); }
 
-# view res/layout/fragment_main.xml #generated:107
+# view res/layout/fragment_main.xml #generated:105
+# view res/layout/fragment_tutorial_two.xml #generated:17
+# view res/layout/fragment_tutorial_two.xml #generated:28
 # view res/layout/fragment_welcome.xml #generated:16
 # view res/layout/fragment_withdraw.xml #generated:18
 # view res/layout/fragment_withdraw.xml #generated:30
+# view res/layout/fragment_withdraw.xml #generated:78
 -keep class info.hoang8f.widget.FButton { <init>(...); }
 

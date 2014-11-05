@@ -941,6 +941,18 @@ android.support.v7.widget.SearchView$SearchAutoComplete: SearchView$SearchAutoCo
 android.support.v7.widget.SearchView$SearchAutoComplete: SearchView$SearchAutoComplete(android.content.Context,android.util.AttributeSet,int)
 android.support.v7.widget.SearchView$SearchAutoComplete: void setSearchView(android.support.v7.widget.SearchView)
 android.support.v7.widget.SearchView$SearchAutoComplete: void setThreshold(int)
+com.crashlytics.android.internal.W: com.crashlytics.android.internal.W[] values()
+com.crashlytics.android.internal.W: com.crashlytics.android.internal.W valueOf(java.lang.String)
+com.crashlytics.android.internal.aV: com.crashlytics.android.internal.aV[] values()
+com.crashlytics.android.internal.aV: com.crashlytics.android.internal.aV valueOf(java.lang.String)
+com.crashlytics.android.internal.ad: com.crashlytics.android.internal.ad[] values()
+com.crashlytics.android.internal.ad: com.crashlytics.android.internal.ad valueOf(java.lang.String)
+com.crashlytics.android.internal.ai: com.crashlytics.android.internal.ai[] values()
+com.crashlytics.android.internal.ai: com.crashlytics.android.internal.ai valueOf(java.lang.String)
+com.crashlytics.android.internal.ap: com.crashlytics.android.internal.ap[] values()
+com.crashlytics.android.internal.ap: com.crashlytics.android.internal.ap valueOf(java.lang.String)
+com.crashlytics.android.internal.ax: com.crashlytics.android.internal.ax[] values()
+com.crashlytics.android.internal.ax: com.crashlytics.android.internal.ax valueOf(java.lang.String)
 com.google.gson.FieldNamingPolicy: com.google.gson.FieldNamingPolicy[] values()
 com.google.gson.FieldNamingPolicy: com.google.gson.FieldNamingPolicy valueOf(java.lang.String)
 com.google.gson.LongSerializationPolicy: com.google.gson.LongSerializationPolicy[] values()
@@ -1385,11 +1397,11 @@ dev.blacksheep.reddmine.R$id: int action_context_bar
 dev.blacksheep.reddmine.R$id: int action_menu_divider
 dev.blacksheep.reddmine.R$id: int action_menu_presenter
 dev.blacksheep.reddmine.R$id: int action_mode_close_button
-dev.blacksheep.reddmine.R$id: int action_settings
 dev.blacksheep.reddmine.R$id: int activity_chooser_view_content
 dev.blacksheep.reddmine.R$id: int always
 dev.blacksheep.reddmine.R$id: int auto_focus
 dev.blacksheep.reddmine.R$id: int bCopyAddress
+dev.blacksheep.reddmine.R$id: int bDonate
 dev.blacksheep.reddmine.R$id: int bGetWallet
 dev.blacksheep.reddmine.R$id: int bPlayNow
 dev.blacksheep.reddmine.R$id: int bQr
@@ -1523,7 +1535,6 @@ dev.blacksheep.reddmine.R$layout: int fragment_navigation_drawer
 dev.blacksheep.reddmine.R$layout: int fragment_welcome
 dev.blacksheep.reddmine.R$layout: int fragment_withdraw
 dev.blacksheep.reddmine.R$layout: int support_simple_spinner_dropdown_item
-dev.blacksheep.reddmine.R$menu: int main
 dev.blacksheep.reddmine.R$string: int abc_action_bar_home_description
 dev.blacksheep.reddmine.R$string: int abc_action_bar_up_description
 dev.blacksheep.reddmine.R$string: int abc_action_menu_overflow_description
@@ -1541,6 +1552,7 @@ dev.blacksheep.reddmine.R$string: int action_settings
 dev.blacksheep.reddmine.R$string: int app_name
 dev.blacksheep.reddmine.R$string: int barcode_image
 dev.blacksheep.reddmine.R$string: int capture_name
+dev.blacksheep.reddmine.R$string: int com_crashlytics_android_build_id
 dev.blacksheep.reddmine.R$string: int contents_contact
 dev.blacksheep.reddmine.R$string: int contents_email
 dev.blacksheep.reddmine.R$string: int contents_location
@@ -1570,6 +1582,7 @@ dev.blacksheep.reddmine.R$string: int result_tel
 dev.blacksheep.reddmine.R$string: int result_text
 dev.blacksheep.reddmine.R$string: int result_uri
 dev.blacksheep.reddmine.R$string: int result_wifi
+dev.blacksheep.reddmine.R$string: int warning_test
 dev.blacksheep.reddmine.R$string: int welcome_text
 dev.blacksheep.reddmine.R$string: int wifi_changing_network
 dev.blacksheep.reddmine.R$string: int wifi_ssid_label

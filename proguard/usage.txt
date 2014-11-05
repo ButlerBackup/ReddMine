@@ -2896,6 +2896,117 @@ android.support.v7.widget.SuggestionsAdapter:
     static final int INVALID_INDEX
     124:124:public int getQueryRefinement()
     172:174:public void close()
+com.crashlytics.android.CrashTest
+com.crashlytics.android.Crashlytics:
+    public static final java.lang.String TAG
+    176:189:public static void logException(java.lang.Throwable)
+    195:200:static void a(java.lang.String)
+    224:225:public static void log(java.lang.String)
+    228:236:private static void a(int,java.lang.String,java.lang.String)
+    252:256:public static void log(int,java.lang.String,java.lang.String)
+    284:285:public static void setUserIdentifier(java.lang.String)
+    293:294:public static void setUserName(java.lang.String)
+    302:303:public static void setUserEmail(java.lang.String)
+    309:310:public static void setApplicationInstallationIdentifier(java.lang.String)
+    321:341:public static void setString(java.lang.String,java.lang.String)
+    349:350:public static void setBool(java.lang.String,boolean)
+    358:359:public static void setDouble(java.lang.String,double)
+    367:368:public static void setFloat(java.lang.String,float)
+    376:377:public static void setInt(java.lang.String,int)
+    385:386:public static void setLong(java.lang.String,long)
+    399:400:public final void setListener(com.crashlytics.android.CrashlyticsListener)
+    408:409:public final void setDebugMode(boolean)
+    417:417:public final boolean getDebugMode()
+    425:457:public static void setPinningInfoProvider(com.crashlytics.android.PinningInfoProvider)
+    460:460:public static com.crashlytics.android.PinningInfoProvider getPinningInfoProvider()
+    473:476:public final boolean verifyPinning(java.net.URL)
+    514:515:public final void crash()
+    755:761:private static java.lang.String c(java.lang.String)
+com.crashlytics.android.CrashlyticsMissingDependencyException:
+    private static final long serialVersionUID
+com.crashlytics.android.P
+com.crashlytics.android.PinningInfoProvider:
+    public abstract java.io.InputStream getKeyStoreStream()
+    public abstract java.lang.String getKeyStorePassword()
+    public abstract java.lang.String[] getPins()
+com.crashlytics.android.i:
+    private static final long serialVersionUID
+com.crashlytics.android.internal.A:
+    68:68:public final void a(int,java.lang.String,java.lang.String,boolean)
+com.crashlytics.android.internal.B:
+    35:42:public final void c(java.lang.Object)
+    13:13:static synthetic void a(com.crashlytics.android.internal.B,java.lang.Object)
+com.crashlytics.android.internal.C
+com.crashlytics.android.internal.D:
+    104:104:public java.lang.String getVersion()
+    184:187:public final void a(com.crashlytics.android.internal.ag)
+com.crashlytics.android.internal.O:
+    108:112:public final void b(java.lang.String)
+com.crashlytics.android.internal.a
+com.crashlytics.android.internal.aD:
+    private static final long serialVersionUID
+com.crashlytics.android.internal.ab:
+    748:753:public static java.lang.String a(int)
+    801:815:public static java.lang.String b(int)
+com.crashlytics.android.internal.ag
+com.crashlytics.android.internal.aq:
+    495:509:public final synchronized void c()
+    513:520:private synchronized void d()
+com.crashlytics.android.internal.av:
+    45:49:public void a(com.crashlytics.android.internal.aG)
+    58:58:public com.crashlytics.android.internal.ay a(com.crashlytics.android.internal.ax,java.lang.String)
+    52:54:private synchronized void a()
+com.crashlytics.android.internal.b:
+    public static final java.lang.String a
+    125:126:public b()
+    134:135:public b(java.lang.String)
+    185:236:public void a(java.lang.Object)
+    239:249:private void a(com.crashlytics.android.internal.g,com.crashlytics.android.internal.h)
+    258:292:public void b(java.lang.Object)
+    304:325:public void c(java.lang.Object)
+    342:359:private void a()
+    372:377:private static void a(java.lang.Object,com.crashlytics.android.internal.g)
+    398:398:private java.util.Set a(java.lang.Class)
+    442:446:private static void a(java.lang.String,java.lang.reflect.InvocationTargetException)
+com.crashlytics.android.internal.e
+com.crashlytics.android.internal.f
+com.crashlytics.android.internal.g
+com.crashlytics.android.internal.h
+com.crashlytics.android.internal.i:
+    public abstract java.util.Map a(java.lang.Object)
+    public abstract java.util.Map b(java.lang.Object)
+com.crashlytics.android.internal.j:
+    33:33:public final java.util.Map a(java.lang.Object)
+    38:38:public final java.util.Map b(java.lang.Object)
+com.crashlytics.android.internal.k
+com.crashlytics.android.internal.l
+com.crashlytics.android.internal.m:
+    public abstract void a(com.crashlytics.android.internal.b)
+com.crashlytics.android.internal.n:
+    40:40:public final void a(com.crashlytics.android.internal.b)
+com.crashlytics.android.internal.o:
+    46:49:public final void a(com.crashlytics.android.internal.b)
+com.crashlytics.android.internal.p:
+    public abstract java.lang.String getVersion()
+    103:103:public java.lang.String getComponentPath()
+com.crashlytics.android.internal.q:
+    public abstract void a(int,java.lang.String,java.lang.String,boolean)
+com.crashlytics.android.internal.s
+com.crashlytics.android.internal.t
+com.crashlytics.android.internal.v:
+    233:237:public final void a(boolean)
+    269:270:public final void a(java.lang.String)
+com.crashlytics.android.j
+com.crashlytics.android.k
+com.crashlytics.android.v:
+    357:367:final void a(java.lang.Thread,java.lang.Throwable)
+    373:385:final void a(long,java.lang.String)
+    532:576:static void a(com.crashlytics.android.internal.aq,int,long,java.lang.String)
+    603:634:private boolean k()
+    66:66:static synthetic void b(com.crashlytics.android.v,java.util.Date,java.lang.Thread,java.lang.Throwable)
+    66:66:static synthetic com.crashlytics.android.internal.aq d(com.crashlytics.android.v)
+    66:66:static synthetic boolean e(com.crashlytics.android.v)
+com.crashlytics.android.x
 com.google.gson.DefaultDateTypeAdapter
 com.google.gson.ExclusionStrategy
 com.google.gson.FieldAttributes
@@ -4799,13 +4910,9 @@ dev.blacksheep.reddmine.R$drawable
 dev.blacksheep.reddmine.R$id
 dev.blacksheep.reddmine.R$integer
 dev.blacksheep.reddmine.R$layout
-dev.blacksheep.reddmine.R$menu
 dev.blacksheep.reddmine.R$string
 dev.blacksheep.reddmine.R$style
 dev.blacksheep.reddmine.R$styleable
-dev.blacksheep.reddmine.classes.MCrypt:
-    60:85:public byte[] decrypt(java.lang.String)
-    98:108:public static byte[] hexToBytes(java.lang.String)
 dev.blacksheep.reddmine.fragments.AboutFragment
 info.hoang8f.fbutton.R:
     9:9:public R()

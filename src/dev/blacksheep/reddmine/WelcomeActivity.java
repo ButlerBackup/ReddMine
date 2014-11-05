@@ -1,5 +1,6 @@
 package dev.blacksheep.reddmine;
 
+import com.crashlytics.android.Crashlytics;
 import info.hoang8f.widget.FButton;
 
 import org.json.JSONObject;
@@ -27,9 +28,10 @@ public class WelcomeActivity extends ActionBarActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		Crashlytics.start(this);
 		SecurePreferences sp = new SecurePreferences(WelcomeActivity.this);
 		if (!sp.getString("unique", "").equals("") && !sp.getString("wallet", "").equals("")) {
-			startActivity(new Intent(WelcomeActivity.this, MainActivity.class));
+			startActivity(new Intent(WelcomeActivity.this, TutorialActivity.class));
 			finish();
 		}
 		setContentView(R.layout.fragment_welcome);
@@ -69,7 +71,7 @@ public class WelcomeActivity extends ActionBarActivity {
 				String hashUnique = Utils.md5(unique);
 				String hashedUnique = hashUnique.substring(0, 20);
 				Future<String> res = Ion.with(WelcomeActivity.this).load(Consts.WEBSITE_MAIN + "?action=generateWallet&id=" + hashedUnique).asString();
-				Log.e("TEXT", Consts.WEBSITE_MAIN + "?action=generateWallet&id=" + hashedUnique);
+				//Log.e("TEXT", Consts.WEBSITE_MAIN + "?action=generateWallet&id=" + hashedUnique);
 				String result = res.get();
 				JSONObject jObject = new JSONObject(result);
 				if (jObject.getString("success").equals("1")) {
@@ -97,7 +99,7 @@ public class WelcomeActivity extends ActionBarActivity {
 						pd.cancel();
 					}
 					if (success) {
-						startActivity(new Intent(WelcomeActivity.this, MainActivity.class));
+						startActivity(new Intent(WelcomeActivity.this, TutorialActivity.class));
 						finish();
 					} else {
 						Crouton.makeText(WelcomeActivity.this, message, Style.ALERT).show();
@@ -105,6 +107,5 @@ public class WelcomeActivity extends ActionBarActivity {
 				}
 			});
 		}
-
 	}
 }

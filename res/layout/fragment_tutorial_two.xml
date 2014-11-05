@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fbutton="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.mobsandgeeks.ui.TypefaceTextView
+        android:id="@+id/tvTutorialTwo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/tutorial_two_text"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        fbutton:customTypeface="roboto.ttf" />
+
+    <info.hoang8f.widget.FButton
+        android:id="@+id/bTipMe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tip Me!"
+        fbutton:buttonColor="@color/fbutton_default_color"
+        fbutton:cornerRadius="0dp"
+        fbutton:shadowColor="@color/fbutton_default_shadow_color"
+        fbutton:shadowEnabled="true"
+        fbutton:shadowHeight="5dp" />
+
+    <info.hoang8f.widget.FButton
+        android:id="@+id/bPlayNow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Play Now!"
+        fbutton:buttonColor="@color/fbutton_default_color"
+        fbutton:cornerRadius="0dp"
+        fbutton:shadowColor="@color/fbutton_default_shadow_color"
+        fbutton:shadowEnabled="true"
+        fbutton:shadowHeight="5dp" />
+
+</LinearLayout>

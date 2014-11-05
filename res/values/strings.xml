@@ -3,9 +3,12 @@
     <string name="app_name">ReddMine</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="welcome_text">Hi Welcome! Thanks for downloading my application. Let\'s cut the chase and play some games! However, I\'ll have to create a Reddcoin wallet for you. Once you have a stable internet connection, click the button below!</string>
+    <string name="welcome_text">Hey there! Thanks for downloading this game. Let\'s cut the chase and play some games! However, I\'ll have to create a Reddcoin wallet for you. Once you have a stable internet connection, click the button below!</string>
+    <string name="warning_test">DO NOTE: If you\'ve won the game yet you did not receive any coins, stop playing and inform me. The winning coin pool must be empty. I\'ll check the logs and hand you the coins asap.</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="tutorial_one_text"><![CDATA[Let\'s keep this tutorial short.<br>I\'ll go through some \'hidden\' UI with you.<br>Firstly, on the main screen, click on your wallet address to bring up a dialog where you can share your wallet address or copy to clipboard.<br>Secondly, you can cash out anytime you like. Click on the multiplier (for example 1.5x) after opening ONE block.<br>Thirdly, a hash is created for you during every game and show after the game has ending. Clicking it brings you to the website where you can verify the game\'s integrity.]]></string>
+    <string name="tutorial_two_text"><![CDATA[This is your wallet address. You do need to deposit some coins to get started (6 confirmations). Do you need some coins to get started or just to test out the game? Click the button below to get an instant tip!\nElse, click Play Now!]]></string>
 
     <array name="titles">
         <item>Home</item>
@@ -16,12 +19,13 @@
     </array>
     <array name="help">
         <item><![CDATA[<b>1)</b> A wallet is unique for every phone. If you\'re changing to a new smartphone, be sure to withdraw the coins to another wallet, or contact me for a direct transfer (no fees, don\'t worry). ]]></item>
-        <item><![CDATA[<b>2)</b> Each minefield is generated the moment you click \"Play\". What I do is to fill up an array with numbers of \"1\" and \"0\", then scramble them up. No mine is planted below your finger\'s touches, Everything is random.]]></item>
+        <item><![CDATA[<b>2)</b> Each minefield is generated the moment you click \"Play\". What I do is to fill up an array with numbers of \"1\" and \"0\", then scramble them up. No mine is planted below your finger\'s touches. Everything is random.]]></item>
         <item><![CDATA[<b>3)</b> To cash out and not risk any more coins, click the multiplier above the blue \"Play\" button after the game has started. ]]></item>
         <item><![CDATA[<b>4)</b> To get the QR code or direct address of your wallet to share etc, click on the wallet address.]]></item>
         <item><![CDATA[<b>5)</b> If the coins remaining is stuck at \"Refreshing\", click the text to initiate loading. DO NOT spam or else problems will arise. ]]></item>
         <item><![CDATA[<b>6)</b> A SHA256 hash of the mines\' positions and current game\'s data is generated. After the game ends, the actual value is shown. Click on it and it will open up a webpage for you to verify the actual game hash. ]]></item>
         <item><![CDATA[<b>7)</b> Any game or data/transaction manipulation will result in an instant ban. ]]></item>
+        <item><![CDATA[<b>7)</b> <b>Multiplier</b> : <br>	<b>Multiplier 1.5x and below</b> - randomly increase multiplier by 0.01 to 0.05<br>	<b>Multiplier above 1.5 to 5</b> and below - randomly increase multiplier by 0.5 to 1.5<br>	<b>Multiplier above 5</b> - randomly increase multiplier by 1 to 5 ]]></item>
     </array>
 
 </resources>

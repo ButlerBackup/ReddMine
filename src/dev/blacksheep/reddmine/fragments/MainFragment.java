@@ -105,57 +105,60 @@ public class MainFragment extends Fragment {
 			@Override
 			public void onClick(View arg0) {
 				if (availableCoins >= Double.parseDouble(etReddAmountToBet.getText().toString())) {
-					reset();
-					tvStopAndDraw.setEnabled(true);
-					gameInProgress = true;
-					tvStopAndDraw.setText(winMultiplier + "x");
-					tvStopAndDraw.setVisibility(View.VISIBLE);
-					etReddAmountToBet.setEnabled(false);
-					sbWinAmount.setEnabled(false);
-					bPlayNow.setEnabled(false);
-					for (final Button b : minesButtons) {
-						b.setEnabled(true);
-						b.setOnClickListener(new OnClickListener() {
+					if (Double.parseDouble(etReddAmountToBet.getText().toString()) >= 0.5 && Double.parseDouble(etReddAmountToBet.getText().toString()) <= 100) {
+						reset();
+						tvStopAndDraw.setEnabled(true);
+						gameInProgress = true;
+						tvStopAndDraw.setText(winMultiplier + "x");
+						tvStopAndDraw.setVisibility(View.VISIBLE);
+						etReddAmountToBet.setEnabled(false);
+						sbWinAmount.setEnabled(false);
+						bPlayNow.setEnabled(false);
+						for (final Button b : minesButtons) {
+							b.setEnabled(true);
+							b.setOnClickListener(new OnClickListener() {
 
-							@Override
-							public void onClick(View v) {
-								buttonsPressed++;
-								timeToIncreaseMultiplier++;
-								int tag = (Integer) b.getTag();
-								if (minesArray.get(tag) == 0) {
-									b.setBackgroundResource(R.drawable.ic_mines_nope);
-									if (timeToIncreaseMultiplier % 2 == 0) {
-										Log.e("HEHE", "HEHE");
-										if (currentGameMultipler <= 1.5) {
-											winMultiplier += new Utils(getActivity()).getRandomValue(0.01, 0.05, 2);
-										} else if (currentGameMultipler > 1.5 && currentGameMultipler <= 5) {
-											winMultiplier += new Utils(getActivity()).getRandomValue(0.5, 1.5, 2);
-										} else if (currentGameMultipler > 5) {
-											winMultiplier += new Utils(getActivity()).getRandomValue(1, 5, 2);
-										} else {
-											Log.e("WTF", "NOMULTILIER?!");
+								@Override
+								public void onClick(View v) {
+									buttonsPressed++;
+									timeToIncreaseMultiplier++;
+									int tag = (Integer) b.getTag();
+									if (minesArray.get(tag) == 0) {
+										b.setBackgroundResource(R.drawable.ic_mines_nope);
+										if (timeToIncreaseMultiplier % 2 == 0) {
+											//Log.e("HEHE", "HEHE");
+											if (currentGameMultipler <= 1.5) {
+												winMultiplier += new Utils(getActivity()).getRandomValue(0.01, 0.05, 2);
+											} else if (currentGameMultipler > 1.5 && currentGameMultipler <= 5) {
+												winMultiplier += new Utils(getActivity()).getRandomValue(0.5, 1.5, 2);
+											} else if (currentGameMultipler > 5) {
+												winMultiplier += new Utils(getActivity()).getRandomValue(1, 5, 2);
+											} else {
+												//Log.e("WTF", "NOMULTILIER?!");
+											}
+											//Log.e("WINMULTILIER", winMultiplier + "");
+											// tvMinesResult.setText(Html.fromHtml("<b>"
+											// + minesAmount +
+											// "</b> mines, win amount <b>x" +
+											// decimalFormat.format(winMultiplier)
+											// +
+											// "</b>"));
 										}
-										Log.e("WINMULTILIER", winMultiplier + "");
-										// tvMinesResult.setText(Html.fromHtml("<b>"
-										// + minesAmount +
-										// "</b> mines, win amount <b>x" +
-										// decimalFormat.format(winMultiplier) +
-										// "</b>"));
+										if (25 - buttonsPressed == minesAmount) {
+											endGame(minesArray, true);
+										}
+										tvStopAndDraw.setText(decimalFormat.format(winMultiplier) + "x");
+										allowCheckout = true;
+									} else {
+										b.setBackgroundResource(R.drawable.ic_mines);
+										endGame(minesArray, false);
 									}
-									if (25 - buttonsPressed == minesAmount) {
-										endGame(minesArray, true);
-									}
-									tvStopAndDraw.setText(decimalFormat.format(winMultiplier) + "x");
-									allowCheckout = true;
-								} else {
-									b.setBackgroundResource(R.drawable.ic_mines);
-									endGame(minesArray, false);
 								}
-							}
-						});
+							});
+						}
+					} else {
+						Crouton.makeText(getActivity(), "Min bet : 0.5. Max bet : 100.", Style.INFO).show();
 					}
-				} else if (Double.parseDouble(etReddAmountToBet.getText().toString()) < 0.5) {
-					Crouton.makeText(getActivity(), "You have to enter more than 0.5 reddcoins.", Style.INFO).show();
 				} else {
 					Crouton.makeText(getActivity(), "Not enough coins!", Style.ALERT).show();
 				}
@@ -264,13 +267,13 @@ public class MainFragment extends Fragment {
 	private void setSeekBarAndMultiplier() {
 		int progress = sbWinAmount.getProgress();
 		minesAmount = progress + 3;
-		Log.e("VALUE", minesAmount + "");
+		//Log.e("VALUE", minesAmount + "");
 		double E = 100 - (minesAmount / 0.25);
 		double returnValue = (90 / E);
 		returnValue = (double) Math.round(returnValue * 100) / 100;
 		winMultiplier = Double.parseDouble(decimalFormat.format(returnValue));
 		currentGameMultipler = winMultiplier;
-		Log.e("RETURN VALYE", "" + winMultiplier);
+		//Log.e("RETURN VALYE", "" + winMultiplier);
 		tvMinesResult.setText(Html.fromHtml("<b>" + minesAmount + "</b> mines, win amount <b>x" + decimalFormat.format(returnValue) + "</b>"));
 	}
 
@@ -379,7 +382,7 @@ public class MainFragment extends Fragment {
 		Collections.shuffle(minesArray, new Random(seed));
 		shaResult += " [";
 		for (Integer l : minesArray) {
-			Log.e("LOL", l + "");
+			//Log.e("LOL", l + "");
 			shaResult += l + ",";
 		}
 		shaResult = shaResult.substring(0, shaResult.length() - 1);

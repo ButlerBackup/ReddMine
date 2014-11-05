@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="dev.blacksheep.reddmine"
-    android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionCode="2"
+    android:versionName="0.02b" >
 
     <uses-sdk
         android:minSdkVersion="8"
@@ -26,6 +26,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".SettingsActivity" >
+        </activity>
+        <activity android:name=".TutorialActivity" >
+        </activity>
+
+        <meta-data
+            android:name="com.crashlytics.ApiKey"
+            android:value="c3d209b76117254253c9ff1ad725518e538ea6e3" />
     </application>
 
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />

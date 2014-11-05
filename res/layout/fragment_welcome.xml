@@ -25,4 +25,13 @@
         fbutton:shadowEnabled="true"
         fbutton:shadowHeight="3dp" />
 
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/warning_test"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#FF0000" />
+
 </LinearLayout>

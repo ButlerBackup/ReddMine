@@ -1,8 +1,10 @@
 package dev.blacksheep.reddmine;
 
+import dev.blacksheep.reddmine.fragments.AboutFragment;
 import dev.blacksheep.reddmine.fragments.HelpFragment;
 import dev.blacksheep.reddmine.fragments.MainFragment;
 import dev.blacksheep.reddmine.fragments.WithdrawFragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
@@ -36,13 +38,18 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
 		case 1:
 			fragmentManager.beginTransaction().replace(R.id.container, new WithdrawFragment()).commit();
 			break;
+		case 2:
+			startActivity(new Intent(MainActivity.this, SettingsActivity.class));
+			break;
 		case 3:
 			fragmentManager.beginTransaction().replace(R.id.container, new HelpFragment()).commit();
+			break;
+		case 4:
+			fragmentManager.beginTransaction().replace(R.id.container, new AboutFragment()).commit();
 			break;
 		default:
 			break;
 		}
-
 	}
 
 	public void onSectionAttached(int number) {

@@ -40,7 +40,7 @@ import dev.blacksheep.reddmine.Utils;
 public class WithdrawFragment extends Fragment {
 	TextView tvWalletAmount;
 	DecimalFormat decimalFormat;
-	FButton bWithdraw, bQr;
+	FButton bWithdraw, bQr, bDonate;
 	EditText etAmountToWithdraw, etWithdrawAddress;
 
 	SecurePreferences sp;
@@ -119,7 +119,7 @@ public class WithdrawFragment extends Fragment {
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before, int count) {
 				if (etAmountToWithdraw.getText().toString().length() > 0 && etWithdrawAddress.getText().toString().length() > 0) {
-					if (Double.parseDouble(etAmountToWithdraw.getText().toString()) < availableCoins) {
+					if (Double.parseDouble(etAmountToWithdraw.getText().toString()) <= availableCoins) {
 						bWithdraw.setEnabled(true);
 					} else {
 						bWithdraw.setEnabled(false);
@@ -146,7 +146,7 @@ public class WithdrawFragment extends Fragment {
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before, int count) {
 				if (etAmountToWithdraw.getText().toString().length() > 0 && etWithdrawAddress.getText().toString().length() > 0) {
-					if (Double.parseDouble(etAmountToWithdraw.getText().toString()) < availableCoins) {
+					if (Double.parseDouble(etAmountToWithdraw.getText().toString()) <= availableCoins) {
 						bWithdraw.setEnabled(true);
 					} else {
 						bWithdraw.setEnabled(false);
@@ -166,7 +166,7 @@ public class WithdrawFragment extends Fragment {
 					if (Utils.isNumeric(etAmountToWithdraw.getText().toString())) {
 						new withdrawToWallet().execute(etAmountToWithdraw.getText().toString().trim());
 					} else {
-						Crouton.makeText(getActivity(), "Amount must be less/equal to remaining coins, and must be a whole number (no decimal place).", Style.INFO).show();
+						Crouton.makeText(getActivity(), "Amount must be less/equal to remaining coins.", Style.INFO).show();
 					}
 				} else {
 					Crouton.makeText(getActivity(), "Please input amount of coins to withdraw.", Style.INFO).show();
@@ -188,6 +188,14 @@ public class WithdrawFragment extends Fragment {
 					Intent marketIntent = new Intent(Intent.ACTION_VIEW, marketUri);
 					startActivity(marketIntent);
 				}
+			}
+		});
+		bDonate = (FButton) rootView.findViewById(R.id.bDonate);
+		bDonate.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				etWithdrawAddress.setText("ReXrCWkwatdbUDeHEme5LpTUHm6UG83BpQ");
 			}
 		});
 		SecurePreferences sp = new SecurePreferences(getActivity());
@@ -276,8 +284,8 @@ public class WithdrawFragment extends Fragment {
 						}
 						bQr.setEnabled(true);
 						try {
-							tvWalletAmount.setText(Math.floor(Double.parseDouble(finalBalance.get(0))) + " REDD\n" + finalBalance.get(1) + " pending");
-							availableCoins = Math.floor(Double.parseDouble(finalBalance.get(0)));
+							tvWalletAmount.setText(Double.parseDouble(finalBalance.get(0)) + " REDD\n" + finalBalance.get(1) + " pending");
+							availableCoins = Double.parseDouble(finalBalance.get(0));
 							if (finalBalance.get(2).equals("1")) {
 								showBannedDialog();
 							}

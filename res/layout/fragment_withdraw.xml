@@ -72,7 +72,19 @@
         android:layout_alignParentRight="true"
         android:layout_below="@+id/tvWalletAmount"
         android:padding="8dp"
-        android:text="*rounded down to the nearest whole number. Remaining coins are used to keep the server running."
+        android:text="*1% is taken during withdrawal to keep the server running."
         android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <info.hoang8f.widget.FButton
+        android:id="@+id/bDonate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/bWithdraw"
+        android:text="Donate to winning pools"
+        fbutton:cornerRadius="0dp"
+        fbutton:shadowEnabled="true"
+        fbutton:shadowHeight="3dp" />
 
 </RelativeLayout>

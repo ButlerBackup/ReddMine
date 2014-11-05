@@ -6,21 +6,17 @@ import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.UUID;
-import java.util.concurrent.TimeoutException;
 
 import org.json.JSONObject;
 
 import android.content.Context;
 import android.telephony.TelephonyManager;
 import android.util.Base64;
-import android.util.Log;
 
 import com.koushikdutta.async.future.Future;
 import com.koushikdutta.ion.Ion;
 import com.securepreferences.SecurePreferences;
 
-import de.keyboardsurfer.android.widget.crouton.Crouton;
-import de.keyboardsurfer.android.widget.crouton.Style;
 import dev.blacksheep.reddmine.classes.MCrypt;
 
 public class Utils {
@@ -34,9 +30,10 @@ public class Utils {
 		ArrayList<String> finalBalance = new ArrayList<String>();
 		try {
 			Future<String> res = Ion.with(context).load(Consts.WEBSITE_MAIN + "?action=getBalance&id=" + getUnique()).asString();
-			Log.e("URL", Consts.WEBSITE_MAIN + "?action=getBalance&id=" + getUnique());
+			// Log.e("URL", Consts.WEBSITE_MAIN + "?action=getBalance&id=" +
+			// getUnique());
 			String result = res.get();
-			Log.e("getBalance", result);
+			// Log.e("getBalance", result);
 			JSONObject jObject = new JSONObject(result);
 			String time = jObject.getString("time");
 			MCrypt mcrypt = new MCrypt(time);
@@ -52,14 +49,14 @@ public class Utils {
 	public double getRandomValue(double lowerBound, double upperBound, int decimalPlaces) {
 		Random random = new Random(System.nanoTime());
 		if (lowerBound < 0 || upperBound <= lowerBound || decimalPlaces < 0) {
-			Log.e("ERROR", "Error getRandomValue");
+			// Log.e("ERROR", "Error getRandomValue");
 			throw new IllegalArgumentException("Error");
 		}
 
 		double dbl = ((random == null ? new Random() : random).nextDouble() //
 				* (upperBound - lowerBound))
 				+ lowerBound;
-		Log.e("Random no", dbl + "");
+		// Log.e("Random no", dbl + "");
 		return Double.valueOf(String.format("%." + decimalPlaces + "f", dbl));
 
 	}
@@ -147,9 +144,10 @@ public class Utils {
 		String currentTime = String.valueOf(System.currentTimeMillis() / 1000L);
 		try {
 			MCrypt mcrypt = new MCrypt(currentTime);
-			String encrypted = Utils.base64String(MCrypt.bytesToHex(mcrypt.encrypt(address + "|" + amount + "|" + getUnique() + "|" + System.currentTimeMillis() / 1000L)));
+			String encrypted = Utils.base64String(MCrypt.bytesToHex(mcrypt.encrypt(address + "|" + amount + "|" + getUnique() + "|" + currentTime)));
 			Future<String> res = Ion.with(context).load(Consts.WEBSITE_MAIN + "?action=withdraw&t=" + currentTime + "&x=" + encrypted + "&id=" + getUnique()).asString();
-			Log.e("URL", Consts.WEBSITE_MAIN + "?action=withdraw&t=" + currentTime + "&x=" + encrypted + "&id=" + getUnique());
+			// Log.e("URL", Consts.WEBSITE_MAIN + "?action=withdraw&t=" +
+			// currentTime + "&x=" + encrypted + "&id=" + getUnique());
 			String result = res.get();
 			JSONObject jObject = new JSONObject(result);
 			return jObject.getString("message");
@@ -171,9 +169,10 @@ public class Utils {
 			MCrypt mcrypt = new MCrypt(currentTime);
 			String encrypted = Utils.base64String(MCrypt.bytesToHex(mcrypt.encrypt(origString)));
 			Future<String> res = Ion.with(context).load(Consts.WEBSITE_MAIN + "?action=tx&t=" + currentTime + "&x=" + encrypted + "&id=" + getUnique() + "&gt=" + gameTime).asString();
-			Log.e("URL", Consts.WEBSITE_MAIN + "?action=tx&t=" + currentTime + "&x=" + encrypted + "&id=" + getUnique() + "&gt=" + gameTime);
+			// Log.e("URL", Consts.WEBSITE_MAIN + "?action=tx&t=" + currentTime
+			// + "&x=" + encrypted + "&id=" + getUnique() + "&gt=" + gameTime);
 			String result = res.get();
-			Log.e("RESULT", result);
+			// Log.e("RESULT", result);
 			JSONObject jObject = new JSONObject(result);
 			return jObject.getString("message");
 		} catch (Exception e) {

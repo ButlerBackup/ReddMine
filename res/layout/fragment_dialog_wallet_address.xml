@@ -15,11 +15,12 @@
 
     <ImageView
         android:id="@+id/ivAddress"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="500px"
+        android:layout_height="900px"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_below="@+id/tvAddress"
+        android:adjustViewBounds="true"
         android:background="@drawable/abc_ab_bottom_solid_dark_holo" />
 
     <Button
